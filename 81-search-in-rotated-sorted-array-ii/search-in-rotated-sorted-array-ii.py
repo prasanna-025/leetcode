@@ -1,5 +1,6 @@
 class Solution(object):
     def search(self, nums, target):
+        nums.sort()
         for i in range(len(nums)):
             if nums[i]==target:
                 return True
