@@ -2,7 +2,8 @@ class Solution(object):
     def findPeakElement(self, nums):
         if len(nums)<=1:
             return 0
-        l=0
+        l= 0
+        vana=0
         r=len(nums)-1
         while l<r:
             m=(l+r)//2
@@ -11,5 +12,5 @@ class Solution(object):
 
             else:
                 l=m+1
-        return r
+        return l
        
