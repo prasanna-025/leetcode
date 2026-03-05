@@ -20,7 +20,7 @@ class Solution(object):
         for i in range(m+n):
             nums1[i]=x[i]
 
-        return x
+  
 
             
 
