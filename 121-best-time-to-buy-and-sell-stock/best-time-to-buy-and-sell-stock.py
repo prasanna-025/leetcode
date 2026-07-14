@@ -5,7 +5,7 @@ class Solution(object):
         
 
 
-        for i in range(len(prices)):
+        for i in range(1,len(prices)):
             if prices[i]<minmum:
                 minmum=prices[i]
 
