@@ -1,33 +1,16 @@
 class Solution(object):
     def maxProfit(self, prices):
+
         result=0
-        minmum=prices[0]
+        minum=prices[0]
+
+        for i in range(len(prices)):
+            if prices[i]<minum:
+                minum=prices[i]
         
-
-
-        for i in range(1,len(prices)):
-            if prices[i]<minmum:
-                minmum=prices[i]
-
-
-            profit=prices[i]-minmum
+            profit=prices[i]-minum
             result=max(result,profit)
+
         return result
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-
-       
         
