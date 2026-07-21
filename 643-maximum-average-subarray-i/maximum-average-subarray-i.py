@@ -4,12 +4,11 @@ class Solution:
         maxe=window
 
         for i in range(k,len(nums)):
-
             window=window-nums[i-k]+nums[i]
             maxe=max(window,maxe)
         
         return maxe/k
-            
+
                     
 
 
