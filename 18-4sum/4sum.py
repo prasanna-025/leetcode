@@ -24,10 +24,10 @@ class Solution:
                             r=r-1
                     elif s<target:
                         l=l+1
-                        while l<r and nums[l]==nums[l-1]:
-                            l=l+1
+                        # while l<r and nums[l]==nums[l-1]:
+                        #     l=l+1
                     elif s>target:
                         r=r-1
-                        while l<r and nums[r]==nums[r+1]:
-                            r=r-1
+                        # while l<r and nums[r]==nums[r+1]:
+                        #     r=r-1
         return result
