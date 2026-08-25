@@ -1,11 +1,10 @@
 class Solution(object):
     def missingNumber(self, nums):
-        k={}
+        freq={}
 
         for i in nums:
-            k[i]=1
-       
-        for i in range(len(nums)+1):
-            if i not in k:
-                return i
+            freq[i]=freq.get(i,0)+1
         
+        for i in range(len(nums)+1):
+            if i not in freq:
+                return i
