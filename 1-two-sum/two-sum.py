@@ -1,12 +1,15 @@
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
-        d={}
+
+
+        freq={}
 
         for i in range(len(nums)):
-            values=nums[i]
-            sums=target-values
-            if sums  in d:
-                return[d[sums],i]
-            d[values]=i
-                
+            val=target -nums[i]
+
+            if val in freq:
+                return [freq[val],i]
+            freq[nums[i]]=i
+
+
 
