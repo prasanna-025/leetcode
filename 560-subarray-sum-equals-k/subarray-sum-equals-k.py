@@ -1,9 +1,10 @@
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
-        freq={0:1}
-        count=0
-        sume=0
 
+        freq={0:1}
+
+        sume=0
+        count=0
 
         for i in nums:
             sume+=i
@@ -11,8 +12,9 @@ class Solution:
             if sume-k in freq:
                 count+=freq[sume-k]
             
-
             freq[sume]=freq.get(sume,0)+1
+
         return count
+ 
 
    
