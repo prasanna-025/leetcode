@@ -5,3 +5,5 @@ class Solution:
             sume=sume+nums[i]
             nums[i]=sume
         return nums
+
+
