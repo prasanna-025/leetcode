@@ -3,12 +3,13 @@ class Solution:
         """
         Do not return anything, modify s in-place instead.
         """
-        result=[]
-        for i in range(len(s)-1,-1,-1):
-            result.append(s[i])
 
-        for i in range(len(result)):
-            s[i]=result[i]
+        l=0
+        r=len(s)-1
 
-        return s
-        
+        while l<r:
+            s[l],s[r]=s[r],s[l]
+            l+=1
+            r-=1
+
+
