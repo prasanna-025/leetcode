@@ -1,27 +1,29 @@
-class Solution(object):
-    def merge(self, nums1, m, nums2, n):
-        i=0
-        j=0
-        x=[]
-        while i<m and j<n:
-                if nums1[i]<=nums2[j]:
-                    x.append(nums1[i])
-                    i=i+1
-                else:
-                    x.append(nums2[j])
-                    j+=1
-        while i<m:
-            x.append(nums1[i])
-            i+=1
-        while j<n:
-            x.append(nums2[j])
-            j+=1
-        
-        for i in range(m+n):
-            nums1[i]=x[i]
+class Solution:
+    def merge(self, nums1: list[int], m: int, nums2: list[int], n: int) -> None:
+        """
+        Do not return anything, modify nums1 in-place instead.
 
-  
 
+        """
+
+        i=m-1
+        j=n-1
+        k=m+n-1
+
+        while i>=0 and j>=0:
+            if nums1[i]>nums2[j]:
+                nums1[k]=nums1[i]
+                k-=1
+                i-=1
+            else:
+                nums1[k]=nums2[j]
+                k-=1
+                j-=1
+
+        while j>=0:
+            nums1[k]=nums2[j]
+            j-=1
+            k-=1
             
 
-        
+ 
