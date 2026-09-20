@@ -1,19 +1,25 @@
-class Solution(object):
-    def sortColors(self, nums):
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
 
-        z=[]
-        o=[]
-        s=[]
+        low=0
+        mid=0
+        height=len(nums)-1
 
-        for i in nums:
-            if i==0:
-                z.append(i)
-            elif i==1:
-                o.append(i)
+
+        while mid<=height:
+            if nums[mid]==0:
+                nums[mid],nums[low]=nums[low],nums[mid]
+                low+=1
+                mid+=1
+            elif nums[mid]==1:
+                mid+=1     
+
             else:
-                s.append(i)
-        result= z+o+s
+                nums[height],nums[mid]=nums[mid],nums[height]
+                height-=1
+        return nums   
 
-        for i in range(len(nums)):
-            nums[i]=result[i]
-        return nums
+        
