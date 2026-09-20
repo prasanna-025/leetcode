@@ -3,7 +3,7 @@ class Solution:
         l=0
         for i in range(1,len(nums)):
             if nums[i]!=nums[l]:
-                l=l+1
+                l+=1
                 nums[l]=nums[i]
+    
         return l+1
-
