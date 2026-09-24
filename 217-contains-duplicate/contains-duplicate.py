@@ -1,17 +1,10 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
 
-        freq={}
+        k={}
 
-        for i in nums:
-            freq[i]=freq.get(i,0)+1
-        
-        for i in freq:
-            if freq[i]>=2:
-                return True
+        for  i in range(len(nums)):
+            if nums[i] in k:
+                return  True
+            k[nums[i]]=i
         return False
-
-
-
-
-
